@@ -1,7 +1,7 @@
 import { getKeyValue, TOKEN_DICTIONARY } from './storage.service.js'
 import axios from 'axios'
 
-const token = await getKeyValue(TOKEN_DICTIONARY.token)
+const token = process.env.TOKEN ?? (await getKeyValue(TOKEN_DICTIONARY.token))
 
 const getWeather = async city => {
 	if (!token) {
