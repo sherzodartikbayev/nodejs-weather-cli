@@ -32,7 +32,7 @@ const startCLI = () => {
 		return saveToken(args.t)
 	}
 
-	getWeather('uzbekistan')
+	getWeather('tashkent')
 }
 
 startCLI()
